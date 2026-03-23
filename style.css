@@ -1,0 +1,273 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 头部样式 */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 主要内容样式 */
+.main-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #667eea;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+}
+
+.section-content {
+    padding-left: 10px;
+}
+
+/* 信息项样式 */
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-label {
+    font-weight: 600;
+    min-width: 150px;
+    color: #555;
+}
+
+.info-value {
+    flex: 1;
+}
+
+.info-value a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-value a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* 技能样式 */
+.subsection-title {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0 15px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.skill-item {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-level {
+    font-size: 0.9rem;
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* 课程样式 */
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.course-item {
+    background-color: #e3f2fd;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #1976d2;
+}
+
+/* 经历样式 */
+.experience-item,
+.award-item,
+.project-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.experience-title,
+.award-title,
+.project-title {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* 兴趣爱好样式 */
+.hobby-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.hobby-item {
+    background-color: #f3e5f5;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #7b1fa2;
+}
+
+/* 个人理念样式 */
+.philosophy-container {
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #8bc34a;
+}
+
+.philosophy-item {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    color: #33691e;
+}
+
+/* 页脚样式 */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 40px 10px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .info-item {
+        flex-direction: column;
+    }
+
+    .info-label {
+        min-width: unset;
+        margin-bottom: 5px;
+    }
+
+    .skills-container,
+    .course-container,
+    .hobby-container {
+        justify-content: center;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.4s; }
+.section:nth-child(5) { animation-delay: 0.5s; }
+.section:nth-child(6) { animation-delay: 0.6s; }
